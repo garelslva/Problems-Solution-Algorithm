@@ -63,7 +63,7 @@ public class SearchStringKeys {
               .showResults();      
     }
     
-    static  class PipeSearch extends PipeParent{
+    static  class PipeSearch{
 
         private String inputEventsList;
         private List<String> unitEventList;
@@ -112,7 +112,7 @@ public class SearchStringKeys {
         private PipeSearch numbersLow6000() {
             low6000 =  new ArrayList<>();
             for(String n : unitEventList)
-            if(Integer.parseInt( n.replaceAll("(evento\\d=)(\\d{4})", "$2") ) < 6000) low6000.add(n);       
+             if(Integer.parseInt( n.replaceAll("(evento\\d=)(\\d{4})", "$2") ) < 6000) low6000.add(n);       
             return pipeSearch = new PipeSearch(inputEventsList, unitEventList, ordened, low6000);
         }
 
@@ -128,11 +128,6 @@ public class SearchStringKeys {
             System.out.println("\n\nQuestão B - retorna eventos de valores menores que 6000\n"+low6000);
             System.out.println("\n\nQuestão C - retorna 'Eu vou ser QA' quando a chave do evento for 1 e retorna '!' caso contrario\n"+textQA);
         }
-        
-    }
-    
-    class PipeParent{
-        
         
     }
 }

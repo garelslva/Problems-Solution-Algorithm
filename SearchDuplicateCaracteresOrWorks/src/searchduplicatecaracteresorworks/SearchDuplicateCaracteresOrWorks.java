@@ -58,7 +58,7 @@ public class SearchDuplicateCaracteresOrWorks {
 
     private static String searchDuplicateCharacterOrWorks(String input) {
         String response="";
-        for( int count=0,i=0; i < input.length(); i++ ){
+        for( int count=0,i=0; i < input.length(); i++ )
          for( int j=0; (input.length()-j) >= i; j++, count=0 ){
           String aux = input.substring(i, input.length()-j);
           Matcher m = Pattern.compile( aux ).matcher(input);
@@ -66,7 +66,6 @@ public class SearchDuplicateCaracteresOrWorks {
           if(count > 1)
            if( response.length() < aux.length() ) response=aux;
          }
-        }
         return response;
     }
     

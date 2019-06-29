@@ -49,7 +49,10 @@ public class SearchDuplicateCaracteresOrWorks {
         System.out.println( aux.equals("ccc") );          
         System.out.println( "\nresult: final" );  
         System.out.println( aux=searchDuplicateCharacterOrWorks( "abcdeafghifinalfinal" ) );
-        System.out.println( aux.equals("final") );  
+        System.out.println( aux.equals("final") ); 
+        System.out.println( "\nresult: gangue ter" );  
+        System.out.println( aux=searchDuplicateCharacterOrWorks( "abcdgangue tereafggangue terhi" ) );
+        System.out.println( aux.equals("gangue ter") );
         
     }
 

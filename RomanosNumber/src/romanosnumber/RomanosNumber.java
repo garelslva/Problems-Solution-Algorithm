@@ -28,11 +28,11 @@ public class RomanosNumber {
         String[] r={"I","IV","V","IX","X","XL","L","XC","C","CD","D","CM","M"};
            int[] i={1,4,5,9,10,40,50,90,100,400,500,900,1000};
         String   roma = "";
-        for(int cont=12,vlr=integerNumber;cont>-1;cont--){
-        while (vlr>=i[cont]){ roma += r[cont];
+        for(int cont=12,vlr=integerNumber;cont>-1;cont--)
+         while (vlr>=i[cont]){ 
+               roma += r[cont];
                vlr -= i[cont];
-             }
-        }
+         }
         return roma;
     }
 }

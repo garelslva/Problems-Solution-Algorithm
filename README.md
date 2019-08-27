@@ -1,1 +1,1 @@
-# Algoritm Solutions Problems
+# Algorithm Problems Solutions
